@@ -20,6 +20,8 @@ services:
         sync: false # User will input this in the Render UI
       - key: FRONTEND_URL
         value: https://echocare-frontend.onrender.com
+      - key: PYTHON_VERSION
+        value: 3.10.13
 
   # 2. Next.js Frontend Web Service
   - type: web
