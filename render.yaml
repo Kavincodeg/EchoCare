@@ -19,10 +19,7 @@ services:
       - key: GOOGLE_CLIENT_ID
         sync: false # User will input this in the Render UI
       - key: FRONTEND_URL
-        fromService:
-          name: echocare-frontend
-          type: web
-          property: url
+        value: https://echocare-frontend.onrender.com
 
   # 2. Next.js Frontend Web Service
   - type: web
@@ -33,10 +30,7 @@ services:
     startCommand: npm run start
     envVars:
       - key: NEXT_PUBLIC_BACKEND_URL
-        fromService:
-          name: echocare-backend
-          type: web
-          property: url
+        value: https://echocare-backend.onrender.com
       - key: NEXT_PUBLIC_GOOGLE_CLIENT_ID
         sync: false # User will input this in the Render UI
       - key: GEMINI_API_KEY
